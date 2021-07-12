@@ -1,7 +1,7 @@
 <?php
     $severName = "MYSQL5045.site4now.net";
     $userSever = "a771dd_dtdm";
-    $passServer = "1q2w3e4r";
+    $passServer = "ádfasdf";
     $dbName = "db_a771dd_dtdm";
 
     $conn = mysqli_connect($severName, $userSever, $passServer, $dbName);
