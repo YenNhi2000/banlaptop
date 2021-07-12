@@ -1,0 +1,62 @@
+div.middle .box {
+    width: 100%;
+    box-shadow: 1px 1px 2px 1px #aaa;
+}
+
+div.middle .box form {
+    width: 85%;
+    margin: 0px auto;
+}
+
+div.middle .box form .btn-middle{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+div.middle .box form .btn-middle input[type="submit"], div.middle .box form .btn-middle input[type="submit"].cancel:hover{
+    background-color: #ff8000;
+    color: #fff;
+}
+
+div.middle .box form .btn-middle input[type="submit"].cancel{
+    background-color: #fff;
+    border: 1px solid #ff8000;
+    color: #000;
+}
+
+div.thongbao{
+    width: 98%; 
+    margin-left: 1%; 
+    margin-right: 1%;
+}
+
+div.thongbao table{
+    width: 100%;
+    border: #E9E9E9 1px solid; 
+    margin-top: 1%;
+}
+/* Login */
+div.middle .box .username, div.middle .box .password{
+    width: 450px;
+    margin: 5px auto;
+}
+
+div.middle .box .user, div.middle .box .pass{
+    margin-left: 50px;
+}
+
+div.middle p{
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: 50px;
+}
+
+div.middle .box a{
+    text-decoration: none;    
+}
+
+div.middle .box a:hover{
+    font-weight: bold;
+    color: #ff8000;
+}

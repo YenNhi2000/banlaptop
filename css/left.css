@@ -1,0 +1,31 @@
+.menuleft{
+    width: 100%;    
+    float: left;
+}
+
+.list-group{
+    text-align: center;
+    margin-bottom: 5%;
+    /* border: 1px solid rgba(0,0,0,.125); */
+}
+
+.list-group label{
+    background-color: #ff8000;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* .list-group-item.active{
+    background-color: #fff;
+    color: #ff8000;
+    border: 1px solid rgba(0,0,0,.125);
+    border-left-color: #ff8000;
+} */
+
+.list-group-item img {
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0px auto;
+    width: 50%;
+    height: 30px;
+}

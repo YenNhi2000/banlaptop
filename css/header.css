@@ -1,0 +1,26 @@
+nav {
+    background-color: #ff8000;
+}
+
+nav .d-flex{
+    margin-left: 100px;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+nav .d-flex input[type="search"]{
+    border: none;
+    width: 450px;
+}
+
+nav .d-flex input[type="image"]{
+    width: 25px;
+    height: 25px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: #fff;
+}
