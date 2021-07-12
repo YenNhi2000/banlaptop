@@ -27,14 +27,14 @@
 
 <div class="slider">
     <div>
-        <img src="../images/slider/bg1.PNG" alt=""/>
+        <img src="images/slider/bg1.PNG" alt=""/>
     </div>
     
     <div>
-        <img src="../images/slider/bg2.PNG" alt=""/>
+        <img src="images/slider/bg2.PNG" alt=""/>
     </div>
     
     <div>
-        <img src="../images/slider/bg3.PNG" alt=""/>
+        <img src="images/slider/bg3.PNG" alt=""/>
     </div>
 </div>

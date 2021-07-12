@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="./css/register_login.css"/>
+<link rel="stylesheet" type="text/css" href="css/register_login.css"/>
 
 <?php
     if (isset($_POST['login'])){
@@ -30,7 +30,7 @@
             if ($pass == $data['matKhau']){
                 $userAd = $data['tenDN'];
                 $_SESSION['userAd'] = $userAd;
-                header("Location: ./admin/index.php");
+                header("Location: admin/index.php");
 
             }
         }

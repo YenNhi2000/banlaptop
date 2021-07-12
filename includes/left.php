@@ -2,7 +2,7 @@
     $sql = "SELECT * FROM hang" ;
     $hangsp = mysqli_query($conn, $sql);
 ?>
-<link rel="stylesheet" type="text/css" href="../css/left.css"/>
+<link rel="stylesheet" type="text/css" href="css/left.css"/>
 
 <div class="menuleft">
     <ul class="list-group">
@@ -14,12 +14,18 @@
     </ul>
     <!-- <div class="list-group">
         <label class="list-group-item">Các hãng nổi bật</label>
-        <?php while($row = mysqli_fetch_array($hangsp)) { ?>
+        <?php 
+            // while($row = mysqli_fetch_array($hangsp)) { ?>
             <a href='?thamso=sanPham' class="list-group-item list-group-item-action">
-                <?php echo $row['tenHang']; ?>
-                <input type="hidden" name="maHang" value="<?php echo $row['maHang']; ?>">
+                <?php
+                    // echo $row['tenHang']; 
+                ?>
+                <input type="hidden" name="maHang" value="<?php 
+                // echo $row['maHang']; ?>">
             </a>
-        <?php } ?>
+        <?php 
+    // } 
+    ?>
     </div> -->
     <!-- <form action="" method="post" name="hangsp">
         <input name="MaHang" type="hidden" value="" />

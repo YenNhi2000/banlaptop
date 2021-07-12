@@ -10,25 +10,25 @@
 	switch($tham_so)
 	{
 		case "QLHang":
-			include('./screen/qlHang.php');
+			include('screen/qlHang.php');
 			break;
 		case "QLSanPham":
-			include('./screen/qlSanPham.php');
+			include('screen/qlSanPham.php');
 			break;
 		case "QLDatHang":
-			include('./screen/qlDatHang.php');
+			include('screen/qlDatHang.php');
 			break;
 		case "QLKhachHang":
-			include('./screen/qlKhachHang.php');
+			include('screen/qlKhachHang.php');
 			break;
 		case "QLDoanhThu":
-			include('./screen/qlDoanhThu.php');
+			include('screen/qlDoanhThu.php');
 			break;
 		case "thongTin":
-			include('./screen/thongTin.php');
+			include('screen/thongTin.php');
 			break;
 		case "dangXuat":
-			include('./screen/dangXuatAd.php');
+			include('screen/dangXuatAd.php');
 			break;
 		// default:
         //     include("./screen/qlHang.php");

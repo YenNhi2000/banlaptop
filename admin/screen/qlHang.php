@@ -18,7 +18,7 @@
                 <td align="center" width="60px"><?php echo $stt; ?></td>
                 <td align="center" width="90px"><?php echo $data['maHang']; ?></td>
                 <td align="left" width="250px" style="padding: 0 5px;"><?php echo $data['tenHang']; ?></td>
-                <td align="center" width="120px"><img src="../../images/logo/<?php echo $data['hinh']; ?>"></td>
+                <td align="center" width="120px"><img src="../images/logo/<?php echo $data['hinh']; ?>"></td>
                 <td align="center" width="120px"><a href="?thamso=ttKhachHang">Xem</a></td>
                 <td align="center" width="120px"><a href="#">Xóa</a></td>
             </tr>

@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include('./dbconfig.php');
+    include('dbconfig.php');
 ?>
     
 <!DOCTYPE html>
@@ -8,7 +8,7 @@
 <head>
     <meta charset="utf-8">
     <title>Website bán laptop</title>
-    <link rel="stylesheet" type="text/css" href="./css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
 
     <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
 
@@ -20,27 +20,27 @@
 </head>
 <body>
     <div class="header sticky-top">
-        <?php include('../banlaptop/includes/header.php'); ?>
+        <?php include('includes/header.php'); ?>
     </div>
 
     <div class="main">
         <div class="container">
             <div class="left">
-                <?php include('../banlaptop/includes/left.php'); ?>
+                <?php include('includes/left.php'); ?>
             </div>
 
             <div class="middle">
-                <?php include('../banlaptop/chuyentrang.php'); ?>
+                <?php include('chuyentrang.php'); ?>
             </div>
 
             <div class="right">
-                <?php include('../banlaptop/includes/right.php'); ?>
+                <?php include('includes/right.php'); ?>
             </div>
         </div>
     </div>
 
     <div class="footer">
-        <?php include('../banlaptop/includes/footer.php'); ?>
+        <?php include('includes/footer.php'); ?>
     </div>
 </body>
 </html>

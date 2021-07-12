@@ -16,10 +16,10 @@
 		// 	include('../BCcloud/screen/gioHang/gioHang.php');
 		// 	break;
 		case "dangNhap":
-			include('./screen/dangNhap.php');
+			include('screen/dangNhap.php');
 			break;
 		case "dangKy":
-			include('./screen/dangKy.php');
+			include('screen/dangKy.php');
 			break;
 		// case "sanPham":
 		// 	include('../BCcloud/screen/sanPham/sanPham.php');
@@ -40,6 +40,6 @@
 		// 	include('../BCcloud/screen/taiKhoan/dangNhap/xlDangNhap.php');
 		// 	break;
 		default:
-            include("../banlaptop/screen/trangChu.php");
+            include("screen/trangChu.php");
 	}
 ?>

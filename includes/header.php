@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="../css/header.css"/>
+<link rel="stylesheet" type="text/css" href="css/header.css"/>
 
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
@@ -11,9 +11,8 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <form class="d-flex">
                 <input class="form-control" type="search" placeholder="Bạn tìm gì..." aria-label="Search">
-                <input type="image" src="../images/search.png">
+                <input type="image" src="images/search.png">
             </form>
-
             <ul class="navbar-nav ms-auto">
 
                 <li class="nav-item">

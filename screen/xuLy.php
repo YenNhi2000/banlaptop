@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include('./dbconfig.php');
+    include('dbconfig.php');
     //lấy thông tin
     
 ?>
