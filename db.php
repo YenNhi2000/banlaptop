@@ -1,17 +1,15 @@
 <?php
+    $severName = "MYSQL5045.site4now.net";
+    $userSever = "a771dd_laptop";
+    $passServer = "1q2w3e4r";
+    $dbName = "db_a771dd_laptop";
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$db = "db_laptoponline";
+    $conn = mysqli_connect($severName, $userSever, $passServer, $dbName);
 
-// Create connection
-$con = mysqli_connect($servername, $username, $password,$db);
+    
+//    $conn = mysqli_connect("localhost", "root", "", "banlaptop");
 
-// Check connection
-if (!$con) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-
-
+    if (mysqli_connect_errno()){
+        echo 'Không thể kết nối với database.' .mysqli_connect_errno();
+    }
 ?>
