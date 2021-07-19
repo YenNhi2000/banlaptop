@@ -85,20 +85,24 @@ session_start();
         }
        
         .glyphicon{
-		display: inline-block;
-		font: normal normal normal 14px/1 FontAwesome;
-		font-size: inherit;
-		text-rendering: auto;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-	}
-	.glyphicon-chevron-left:before{
-		content:"\f053"
-	}
-	.glyphicon-chevron-right:before{
-		content:"\f054"
-	}
-    </style>
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    }
+    .glyphicon-chevron-left:before{
+        content:"\f053"
+    }
+    .glyphicon-chevron-right:before{
+        content:"\f054"
+    }
+        
+
+       
+        
+        </style>
 
     </head>
 	<body>
@@ -164,7 +168,7 @@ session_start();
 						<div class="col-md-3">
 							<div class="header-logo">
 								<a href="index.php" class="logo">
-									<font style="font-style:normal; font-size: 33px;color: aliceblue;font-family: serif">
+								<font style="font-style:normal; font-size: 33px;color: aliceblue;font-family: serif">
                                         Laptop Online
                                     </font>
 									
@@ -278,20 +282,24 @@ session_start();
                         </div>
                       </div>
                 <div class="modal fade" id="Modal_register" role="dialog">
-                    <div class="modal-dialog">
+                        <div class="modal-dialog" style ="">
 
-                        <!-- Modal content-->
-                        <div class="modal-content">
+                          <!-- Modal content-->
+                          <div class="modal-content">
                             <div class="modal-header">
-                            	<button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              
                             </div>
                             <div class="modal-body">
-								<?php
-									include "register_form.php";
-		
-								?>
+                            <?php
+                                include "register_form.php";
+    
+                            ?>
+          
                             </div>
+                            
+                          </div>
+
                         </div>
-					</div>
-                </div>
+                      </div>
 		

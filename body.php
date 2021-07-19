@@ -61,7 +61,7 @@
 					<div class="col-md-4 col-xs-6">
 						<a href="product.php?p=78"><div class="shop">
 							<div class="shop-img">
-								<img src="img/product08.png" alt="">
+								<img src="./img/shop01.png" alt="">
 							</div>
 							<div class="shop-body">
 								<h3>Laptop<br>Bán chạy</h3>
@@ -75,7 +75,7 @@
 					<div class="col-md-4 col-xs-6">
 						<a href="product.php?p=72"><div class="shop">
 							<div class="shop-img">
-								<img src="product_images/macbook3.png" alt="">
+								<img src="./product_images/macbook3.png" alt="">
 							</div>
 							<div class="shop-body">
 								<h3>Laptop<br>Nổi bật</h3>
@@ -89,7 +89,7 @@
 					<div class="col-md-4 col-xs-6">
 						<a href="product.php?p=79"><div class="shop">
 							<div class="shop-img">
-								<img src="img/product01.png" alt="">
+								<img src="./product_images/hp1.png" alt="">
 							</div>
 							<div class="shop-body">
 								<h3>Laptop<br>Mới nhất</h3>

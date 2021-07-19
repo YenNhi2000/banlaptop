@@ -4,16 +4,19 @@ $ip_add = getenv("REMOTE_ADDR");
 include "db.php";
 
 if(isset($_POST["categoryhome"])){
-	$category_query = "SELECT * FROM categories WHERE cat_id != 1";
+	$category_query = "SELECT * FROM categories WHERE cat_id!=1";
     
 	$run_query = mysqli_query($con,$category_query) or die(mysqli_error($con));
 	echo "
-		<!-- responsive-nav -->
-		<div id='responsive-nav'>
-			<!-- NAV -->
-			<ul class='main-nav nav navbar-nav'>
-			<li><a href='index.php'>Trang chủ</a></li>
-			<li><a href='store.php'>Macbook</a></li>
+		
+            
+            
+				<!-- responsive-nav -->
+				<div id='responsive-nav'>
+					<!-- NAV -->
+					<ul class='main-nav nav navbar-nav'>
+                    <li class='active'><a href='index.php'>Trang chủ</a></li>
+                    <li><a href='store.php'>Macbook</a></li>
 	";
 	if(mysqli_num_rows($run_query) > 0){
 		while($row = mysqli_fetch_array($run_query)){
@@ -25,8 +28,13 @@ if(isset($_POST["categoryhome"])){
             $row = mysqli_fetch_array($query);
             $count=$row["count_items"];
             
+            
+            
 			echo "
-				<li class='categoryhome' cid='$cid'><a href='store.php'>$cat_name</a></li>
+					
+                    
+                               <li class='categoryhome' cid='$cid'><a href='store.php'>$cat_name</a></li>
+                    
 			";
 		}
         

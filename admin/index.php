@@ -1,16 +1,22 @@
+<?php
+    session_start();
+    include("../db.php");
 
-    <?php
-session_start();
-include("../db.php");
-
-include "sidenav.php";
-include "topheader.php";
+    if(!isset($_SESSION['userAd']) || ($_SESSION['userAd']=="")) { 
+      include('login.php');
+  }
+  else{
+    include "sidenav.php";
+    include "topheader.php";
 ?>
-      <!-- End Navbar -->
-      <div class="content">
-        <div class="container-fluid">
-         <div class="panel-body">
-		<a>
+    <?php 
+        
+    ?>
+    <!-- End Navbar -->
+    <div class="content">
+      <div class="container-fluid">
+        <div class="panel-body">
+		      <a>
             <?php  //success message
             if(isset($_POST['success'])) {
             $success = $_POST["success"];
@@ -89,8 +95,12 @@ include "topheader.php";
                 <div class="table-responsive ps">
                   <table class="table table-hover tablesorter " id="">
                     <thead class=" text-primary">
-                        <tr><th>ID</th><th>Thương hiệu</th><th>Số lượng</th>
-                    </tr></thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Thương hiệu</th>
+                        <th>Số lượng</th>
+                      </tr>
+                    </thead>
                     <tbody>
                       <?php 
                         $result=mysqli_query($con,"select * from brands")or die ("query 1 incorrect.....");
@@ -114,13 +124,12 @@ include "topheader.php";
               </div>
             </div>
           </div>
-           </div>
-           
-           
-            
-          
         </div>
       </div>
-      <?php
-include "footer.php";
+    </div>
+    <?php
+        }
+    ?>
+<?php
+  include "footer.php";
 ?>
