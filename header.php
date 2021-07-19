@@ -1,6 +1,5 @@
 <?php
-session_start();
-
+	session_start();
 ?>
 
 <!DOCTYPE html>
@@ -85,24 +84,20 @@ session_start();
         }
        
         .glyphicon{
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    }
-    .glyphicon-chevron-left:before{
-        content:"\f053"
-    }
-    .glyphicon-chevron-right:before{
-        content:"\f054"
-    }
-        
-
-       
-        
-        </style>
+			display: inline-block;
+			font: normal normal normal 14px/1 FontAwesome;
+			font-size: inherit;
+			text-rendering: auto;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+		.glyphicon-chevron-left:before{
+			content:"\f053"
+		}
+		.glyphicon-chevron-right:before{
+			content:"\f054"
+		}
+    </style>
 
     </head>
 	<body>
@@ -118,15 +113,16 @@ session_start();
 					</ul>
 					<ul class="header-links pull-right">
 						<li><a href="index.php"><i class="fa fa-inr"></i> Nhóm 7</a></li>
-						<li><?php
-                             include "db.php";
-                            if(isset($_SESSION["uid"])){
-                                $sql = "SELECT first_name FROM user_info WHERE user_id='$_SESSION[uid]'";
-                                $query = mysqli_query($con,$sql);
-                                $row=mysqli_fetch_array($query);
-                                
-                                echo '
-                               <div class="dropdownn">
+						<li>
+							<?php
+								include "db.php";
+								if(isset($_SESSION["uid"])){
+									$sql = "SELECT first_name FROM user_info WHERE user_id='$_SESSION[uid]'";
+									$query = mysqli_query($con,$sql);
+									$row=mysqli_fetch_array($query);
+									
+									echo '
+								<div class="dropdownn">
                                   <a href="#" class="dropdownn" data-toggle="modal" data-target="#myModal" ><i class="fa fa-user-o"></i> Xin chào '.$row["first_name"].'</a>
                                   <div class="dropdownn-content">
                                     <a href="" data-toggle="modal" data-target="#profile"><i class="fa fa-user-circle" aria-hidden="true" ></i>Thông tin</a>
@@ -138,20 +134,18 @@ session_start();
                             }else{ 
                                 echo '
                                 <div class="dropdownn">
-                                  <a href="#" class="dropdownn" data-toggle="modal" data-target="#myModal" ><i class="fa fa-user-o"></i> Đăng ký</a>
+                                  <a href="#" class="dropdownn" data-toggle="modal" data-target="#myModal" ><i class="fa fa-user-o"></i> Tài khoản</a>
                                   <div class="dropdownn-content">
                                     <a href="" data-toggle="modal" data-target="#Modal_login"><i class="fa fa-sign-in" aria-hidden="true" ></i>Đăng nhập</a>
                                     <a href="" data-toggle="modal" data-target="#Modal_register"><i class="fa fa-user-plus" aria-hidden="true"></i>Đăng ký</a>
                                     
                                   </div>
                                 </div>';
-                                
-                            }
-                                             ?>
-                               
-                                </li>				
+									
+								}
+                            ?>                               
+                        </li>				
 					</ul>
-					
 				</div>
 			</div>
 			<!-- /TOP HEADER -->
@@ -261,45 +255,39 @@ session_start();
 		<!-- NAVIGATION -->
 		
 		<div class="modal fade" id="Modal_login" role="dialog">
-                        <div class="modal-dialog">
-													
-                          <!-- Modal content-->
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <button type="button" class="close" data-dismiss="modal">&times;</button>
-                              
-                            </div>
-                            <div class="modal-body">
-                            <?php
-                                include "login_form.php";
-    
-                            ?>
-          
-                            </div>
-                            
-                          </div>
-													
-                        </div>
-                      </div>
-                <div class="modal fade" id="Modal_register" role="dialog">
-                        <div class="modal-dialog" style ="">
+			<div class="modal-dialog">
+										
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						
+					</div>
+					<div class="modal-body">
+						<?php
+							include "login_form.php";
 
-                          <!-- Modal content-->
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <button type="button" class="close" data-dismiss="modal">&times;</button>
-                              
-                            </div>
-                            <div class="modal-body">
-                            <?php
-                                include "register_form.php";
-    
-                            ?>
-          
-                            </div>
-                            
-                          </div>
+						?>
+					</div>
+				</div>
+										
+			</div>
+		</div>
+		<div class="modal fade" id="Modal_register" role="dialog">
+			<div class="modal-dialog">
 
-                        </div>
-                      </div>
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+					<div class="modal-body">
+						<?php
+							include "register_form.php";
+						?>
+					</div>
+				</div>
+
+			</div>
+		</div>
 		

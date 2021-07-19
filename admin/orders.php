@@ -1,31 +1,34 @@
+<?php
+  session_start();
+  include("../db.php");
 
-    <?php
-session_start();
-include("../db.php");
+  error_reporting(0);
+  if(isset($_GET['action']) && $_GET['action']!="" && $_GET['action']=='delete')
+  {
+  $order_id=$_GET['order_id'];
 
-error_reporting(0);
-if(isset($_GET['action']) && $_GET['action']!="" && $_GET['action']=='delete')
-{
-$order_id=$_GET['order_id'];
+  /*this is delet query*/
+  mysqli_query($con,"delete from orders where order_id='$order_id'")or die("delete query is incorrect...");
+  } 
 
-/*this is delet query*/
-mysqli_query($con,"delete from orders where order_id='$order_id'")or die("delete query is incorrect...");
-} 
+  ///pagination
+  $page=$_GET['page'];
 
-///pagination
-$page=$_GET['page'];
+  if($page=="" || $page=="1")
+  {
+  $page1=0;	
+  }
+  else
+  {
+  $page1=($page*10)-10;	
+  }
 
-if($page=="" || $page=="1")
-{
-$page1=0;	
-}
-else
-{
-$page1=($page*10)-10;	
-}
-
-include "sidenav.php";
-include "topheader.php";
+  if(!isset($_SESSION['userAd']) || ($_SESSION['userAd']=="")) { 
+    include('login.php');
+  }
+  else{
+    include "sidenav.php";
+    include "topheader.php";
 ?>
       <!-- End Navbar -->
       <div class="content">
@@ -65,6 +68,7 @@ include "topheader.php";
           
         </div>
       </div>
-      <?php
-include "footer.php";
+<?php
+  include "footer.php";
+  }
 ?>

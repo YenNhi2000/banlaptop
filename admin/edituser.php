@@ -1,28 +1,31 @@
+<?php
+  session_start();
+  include("../db.php");
+  $user_id=$_REQUEST['user_id'];
 
-    <?php
-session_start();
-include("../db.php");
-$user_id=$_REQUEST['user_id'];
+  $result=mysqli_query($con,"select user_id,first_name,last_name, email, password from user_info where user_id='$user_id'")or die ("query 1 incorrect.......");
 
-$result=mysqli_query($con,"select user_id,first_name,last_name, email, password from user_info where user_id='$user_id'")or die ("query 1 incorrect.......");
+  list($user_id,$first_name,$last_name,$email,$user_password)=mysqli_fetch_array($result);
 
-list($user_id,$first_name,$last_name,$email,$user_password)=mysqli_fetch_array($result);
+  if(isset($_POST['btn_save'])) 
+  {
 
-if(isset($_POST['btn_save'])) 
-{
+  $first_name=$_POST['first_name'];
+  $last_name=$_POST['last_name'];
+  $email=$_POST['email'];
+  $user_password=$_POST['password'];
 
-$first_name=$_POST['first_name'];
-$last_name=$_POST['last_name'];
-$email=$_POST['email'];
-$user_password=$_POST['password'];
+  mysqli_query($con,"update user_info set first_name='$first_name', last_name='$last_name', email='$email', password='$user_password' where user_id='$user_id'")or die("Query 2 is inncorrect..........");
 
-mysqli_query($con,"update user_info set first_name='$first_name', last_name='$last_name', email='$email', password='$user_password' where user_id='$user_id'")or die("Query 2 is inncorrect..........");
-
-header("location: manageuser.php");
-mysqli_close($con);
-}
-include "sidenav.php";
-include "topheader.php";
+  header("location: manageuser.php");
+  mysqli_close($con);
+  }
+  if(!isset($_SESSION['userAd']) || ($_SESSION['userAd']=="")) { 
+    include('login.php');
+  }
+  else{
+    include "sidenav.php";
+    include "topheader.php";
 ?>
       <!-- End Navbar -->
       <div class="content">
@@ -60,10 +63,6 @@ include "topheader.php";
                         <input type="text" name="password" id="password" class="form-control" value="<?php echo $user_password; ?>">
                       </div>
                     </div>
-                  
-                  
-                  
-                
               </div>
               <div class="card-footer">
                 <button type="submit" id="btn_save" name="btn_save" class="btn btn-fill btn-primary">Update</button>
@@ -71,10 +70,9 @@ include "topheader.php";
               </form>    
             </div>
           </div>
-         
-          
         </div>
       </div>
-      <?php
-include "footer.php";
+<?php
+  include "footer.php";
+  }
 ?>

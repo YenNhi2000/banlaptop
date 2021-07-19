@@ -21,11 +21,11 @@
                                     </div>
                                     <div class="form-group ">
                                     
-                                        <input class="input form-control input-borders" type="text" name="f_name" id="f_name" placeholder="Họ ">
+                                        <input class="input form-control input-borders" type="text" name="f_name" id="f_name" placeholder="Tên">
                                     </div>
                                     <div class="form-group">
                                     
-                                        <input class="input form-control input-borders" type="text" name="l_name" id="l_name" placeholder="Tên">
+                                        <input class="input form-control input-borders" type="text" name="l_name" id="l_name" placeholder="Họ">
                                     </div>
                                     <div class="form-group">
                                         <input class="input form-control input-borders" type="email" name="email"  placeholder="Email">

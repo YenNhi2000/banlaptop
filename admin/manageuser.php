@@ -1,17 +1,19 @@
+<?php
+  session_start();
+  include("../db.php");
+  if(isset($_GET['action']) && $_GET['action']!="" && $_GET['action']=='delete')
+  {
+  $user_id=$_GET['user_id'];
 
-    <?php
-session_start();
-include("../db.php");
-if(isset($_GET['action']) && $_GET['action']!="" && $_GET['action']=='delete')
-{
-$user_id=$_GET['user_id'];
-
-/*this is delet quer*/
-mysqli_query($con,"delete from user_info where user_id='$user_id'")or die("query is incorrect...");
-}
-
-include "sidenav.php";
-include "topheader.php";
+  /*this is delet quer*/
+  mysqli_query($con,"delete from user_info where user_id='$user_id'")or die("query is incorrect...");
+  }
+  if(!isset($_SESSION['userAd']) || ($_SESSION['userAd']=="")) { 
+    include('login.php');
+  }
+  else{
+    include "sidenav.php";
+    include "topheader.php";
 ?>
       <!-- End Navbar -->
       <div class="content">
@@ -58,6 +60,7 @@ include "topheader.php";
           
         </div>
       </div>
-      <?php
-include "footer.php";
+<?php
+  include "footer.php";
+  }
 ?>

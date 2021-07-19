@@ -4,14 +4,11 @@
 
     if(!isset($_SESSION['userAd']) || ($_SESSION['userAd']=="")) { 
       include('login.php');
-  }
-  else{
-    include "sidenav.php";
-    include "topheader.php";
+    }
+    else{
+      include "sidenav.php";
+      include "topheader.php";
 ?>
-    <?php 
-        
-    ?>
     <!-- End Navbar -->
     <div class="content">
       <div class="container-fluid">
@@ -127,9 +124,7 @@
         </div>
       </div>
     </div>
-    <?php
-        }
-    ?>
 <?php
   include "footer.php";
+  }
 ?>
