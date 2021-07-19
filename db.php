@@ -1,9 +1,9 @@
 <?php
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$db = "db_laptoponline";
+$servername = "MYSQL5025.site4now.net";
+$username = "a771dd_website";
+$password = "laptop123";
+$db = "db_a771dd_website";
 
 // Create connection
 $con = mysqli_connect($servername, $username, $password,$db);
