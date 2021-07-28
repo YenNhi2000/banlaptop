@@ -41,7 +41,7 @@ if (isset($_POST["login_user_with_product"])) {
                                     
                                     <div class="form-group">
                                        <label for="email">Mật khẩu</label>
-                                        <input class="input input-borders" type="password" name="password" placeholder="password" id="password" required>
+                                        <input class="input input-borders" type="password" name="password" placeholder="Password" id="password" required>
                                     </div>
                                     
                                     <div class="text-pad" >

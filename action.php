@@ -27,21 +27,16 @@ if(isset($_POST["category"])){
             
             
 			echo "
-					
-                    <div type='button' class='btn navbar-btn category' cid='$cid'>
-									
-									<a href='#'>
-										<span  ></span>
-										$cat_name
-										<small class='qty'>($count)</small>
-									</a>
-								</div>
-                    
+				<div type='button' class='btn navbar-btn category' cid='$cid'>
+					<a href='#'>
+						<span  ></span>
+						$cat_name
+						<small class='qty'>($count)</small>
+					</a>
+				</div>
 			";
-            
 		}
-        
-        
+
 		echo "</div>";
 	}
 }
@@ -80,39 +75,33 @@ if(isset($_POST["getProduct"])){
             
             $cat_name = $row["cat_title"];
 			echo "
-				
-                        
-                        <div class='col-md-4 col-xs-6' >
-								<a href='product.php?p=$pro_id'><div class='product'>
-									<div class='product-img'>
-										<img src='product_images/$pro_image' style='max-height: 170px;' alt=''>
-										<div class='product-label'>
-											<span class='sale'>-30%</span>
-											<span class='new'>NEW</span>
-										</div>
-									</div></a>
-									<div class='product-body'>
-										<p class='product-category'>$cat_name</p>
-										<h3 class='product-name header-cart-item-name'><a href='product.php?p=$pro_id'>$pro_title</a></h3>
-										<h4 class='product-price header-cart-item-info'>$pro_price<del class='product-old-price'>$990.00</del></h4>
-										<div class='product-rating'>
-											<i class='fa fa-star'></i>
-											<i class='fa fa-star'></i>
-											<i class='fa fa-star'></i>
-											<i class='fa fa-star'></i>
-											<i class='fa fa-star'></i>
-										</div>
-										<div class='product-btns'>
-											<button class='add-to-wishlist'><i class='fa fa-heart-o'></i><span class='tooltipp'>add to wishlist</span></button>
-											<button class='add-to-compare'><i class='fa fa-exchange'></i><span class='tooltipp'>add to compare</span></button>
-											<button class='quick-view'><i class='fa fa-eye'></i><span class='tooltipp'>quick view</span></button>
-										</div>
-									</div>
-									<div class='add-to-cart'>
-										<button pid='$pro_id' id='product' class='add-to-cart-btn block2-btn-towishlist' href='#'><i class='fa fa-shopping-cart'></i> add to cart</button>
-									</div>
-								</div>
+				<div class='col-md-4 col-xs-6' >
+					<a href='product.php?p=$pro_id'><div class='product'>
+						<div class='product-img'>
+							<img src='product_images/$pro_image' style='max-height: 170px;' alt=''>
+							<div class='product-label'>
+								<span class='sale'>-30%</span>
+								<span class='new'>Mới</span>
 							</div>
+						</div></a>
+						<div class='product-body'>
+							<p class='product-category'>$cat_name</p>
+							<h3 class='product-name header-cart-item-name'><a href='product.php?p=$pro_id'>$pro_title</a></h3>
+							<h4 class='product-price header-cart-item-info'>$pro_price<span> VND</span> </h4>
+							<div class='product-rating'>
+								<i class='fa fa-star'></i>
+								<i class='fa fa-star'></i>
+								<i class='fa fa-star'></i>
+								<i class='fa fa-star'></i>
+								<i class='fa fa-star'></i>
+							</div>
+							
+						</div>
+						<div class='add-to-cart'>
+							<button pid='$pro_id' id='product' class='add-to-cart-btn block2-btn-towishlist' href='#'><i class='fa fa-shopping-cart'></i>Thêm vào giỏ hàng</button>
+						</div>
+					</div>
+				</div>
                         
 			";
 		}
@@ -154,13 +143,13 @@ if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectBrand"]) || isse
 										<img  src='product_images/$pro_image'  style='max-height: 170px;' alt=''>
 										<div class='product-label'>
 											<span class='sale'>-30%</span>
-											<span class='new'>NEW</span>
+											<span class='new'>Mới</span>
 										</div>
 									</div></a>
 									<div class='product-body'>
 										<p class='product-category'>$cat_name</p>
 										<h3 class='product-name header-cart-item-name'><a href='product.php?p=$pro_id'>$pro_title</a></h3>
-										<h4 class='product-price header-cart-item-info'>$pro_price<del class='product-old-price'>$990.00</del></h4>
+										<h4 class='product-price header-cart-item-info'>$pro_price<span> VND</span></h4>
 										<div class='product-rating'>
 											<i class='fa fa-star'></i>
 											<i class='fa fa-star'></i>
@@ -168,14 +157,9 @@ if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectBrand"]) || isse
 											<i class='fa fa-star'></i>
 											<i class='fa fa-star'></i>
 										</div>
-										<div class='product-btns'>
-											<button class='add-to-wishlist' tabindex='0'><i class='fa fa-heart-o'></i><span class='tooltipp'>add to wishlist</span></button>
-											<button class='add-to-compare'><i class='fa fa-exchange'></i><span class='tooltipp'>add to compare</span></button>
-											<button class='quick-view' ><i class='fa fa-eye'></i><span class='tooltipp'>quick view</span></button>
-										</div>
 									</div>
 									<div class='add-to-cart'>
-										<button pid='$pro_id' id='product' href='#' tabindex='0' class='add-to-cart-btn'><i class='fa fa-shopping-cart'></i> add to cart</button>
+										<button pid='$pro_id' id='product' href='#' tabindex='0' class='add-to-cart-btn'><i class='fa fa-shopping-cart'></i> Thêm vào giỏ hàng</button>
 									</div>
 								</div>
 							</div>
@@ -202,7 +186,7 @@ if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectBrand"]) || isse
 			echo "
 				<div class='alert alert-warning'>
 						<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-						<b>Product is already added into the cart Continue Shopping..!</b>
+						<b>Sản phẩm đã được thêm vào giỏ hàng. Tiếp tục mua sắm..!</b>
 				</div>
 			";//not in video
 		} else {
@@ -213,7 +197,7 @@ if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectBrand"]) || isse
 				echo "
 					<div class='alert alert-success'>
 						<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-						<b>Product is Added..!</b>
+						<b>Sản phẩm đã được thêm..!</b>
 					</div>
 				";
 			}
@@ -225,7 +209,7 @@ if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectBrand"]) || isse
 				echo "
 					<div class='alert alert-warning'>
 							<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-							<b>Product is already added into the cart Continue Shopping..!</b>
+							<b>Sản phẩm đã được thêm vào giỏ hàng. Tiếp tục mua sắm..!</b>
 					</div>";
 					exit();
 			}
@@ -236,7 +220,7 @@ if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectBrand"]) || isse
 				echo "
 					<div class='alert alert-success'>
 						<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-						<b>Your product is Added Successfully..!</b>
+						<b>Sản phẩm của bạn đã được thêm thành công..!</b>
 					</div>
 				";
 				exit();
@@ -296,15 +280,15 @@ if (isset($_POST["Common"])) {
 					
                     
                     <div class="product-widget">
-												<div class="product-img">
-													<img src="product_images/'.$product_image.'" alt="">
-												</div>
-												<div class="product-body">
-													<h3 class="product-name"><a href="#">'.$product_title.'</a></h3>
-													<h4 class="product-price"><span class="qty">'.$n.'</span>$'.$product_price.'</h4>
-												</div>
-												
-											</div>'
+						<div class="product-img">
+							<img src="product_images/'.$product_image.'" alt="">
+						</div>
+						<div class="product-body">
+							<h3 class="product-name"><a href="#">'.$product_title.'</a></h3>
+							<h4 class="product-price"><span class="qty">'.$n.'</span>$'.$product_price.'</h4>
+						</div>
+						
+					</div>'
                     
                     
                     ;
@@ -400,7 +384,7 @@ if (isset($_POST["Common"])) {
 					<tr>
 						<td><a href="store.php" class="btn btn-warning"><i class="fa fa-angle-left"></i> Tiếp tục mua sắm</a></td>
 						<td colspan="2" class="hidden-xs"></td>
-						<td class="hidden-xs text-center"><b class="net_total" ></b></td>
+						<td class="hidden-xs text-center"><b class="net_total"><span>Thành tiền:</span></b></td>
 						<div id="issessionset"></div>
                         <td>
 							
@@ -469,9 +453,9 @@ if (isset($_POST["removeItemFromCart"])) {
 	}
 	if(mysqli_query($con,$sql)){
 		echo "<div class='alert alert-danger'>
-						<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-						<b>Product is removed from cart</b>
-				</div>";
+				<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+				<b>Xóa sản phẩm từ giỏ hàng</b>
+			</div>";
 		exit();
 	}
 }
@@ -488,9 +472,9 @@ if (isset($_POST["updateCartItem"])) {
 	}
 	if(mysqli_query($con,$sql)){
 		echo "<div class='alert alert-info'>
-						<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-						<b>Product is updated</b>
-				</div>";
+				<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+				<b>Sản phẩm đã được cập nhật</b>
+			</div>";
 		exit();
 	}
 }

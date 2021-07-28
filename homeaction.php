@@ -12,8 +12,8 @@ if(isset($_POST["categoryhome"])){
 		<div id='responsive-nav'>
 			<!-- NAV -->
 			<ul class='main-nav nav navbar-nav'>
-			<li class='active'><a href='index.php'>Trang chủ</a></li>
-			<li><a href='store.php'>Macbook</a></li>
+				<li class='active'><a href='index.php'>Trang chủ</a></li>
+				<li><a href='store.php'>Macbook</a></li>
 	";
 	if(mysqli_num_rows($run_query) > 0){
 		while($row = mysqli_fetch_array($run_query)){
@@ -80,7 +80,7 @@ if(isset($_POST["getProducthome"])){
 						<div class='product-body'>
 							<p class='product-category'>$cat_name</p>
 							<h3 class='product-name'><a href='product.php?p=$pro_id'>$pro_title</a></h3>
-							<h4 class='product-price'>$pro_price<del class='product-old-price'>$990.00</del></h4>
+							<h4 class='product-price'>$pro_price<span> VND</span></h4>
 						</div>
 					</a>
 				</div>
@@ -121,13 +121,13 @@ if(isset($_POST["gethomeProduct"])){
 							<img src='product_images/$pro_image' style='max-height: 170px;' alt=''>
 							<div class='product-label'>
 								<span class='sale'>-30%</span>
-								<span class='new'>NEW</span>
+								<span class='new'>Mới</span>
 							</div>
 						</div></a>
 						<div class='product-body'>
 							<p class='product-category'>$cat_name</p>
 							<h3 class='product-name header-cart-item-name'><a href='product.php?p=$pro_id'>$pro_title</a></h3>
-							<h4 class='product-price header-cart-item-info'>$pro_price<del class='product-old-price'>$990.00</del></h4>
+							<h4 class='product-price header-cart-item-info'>$pro_price<span> VND<span></h4>
 							<div class='product-rating'>
 								<i class='fa fa-star'></i>
 								<i class='fa fa-star'></i>
@@ -135,14 +135,9 @@ if(isset($_POST["gethomeProduct"])){
 								<i class='fa fa-star'></i>
 								<i class='fa fa-star'></i>
 							</div>
-							<div class='product-btns'>
-								<button class='add-to-wishlist'><i class='fa fa-heart-o'></i><span class='tooltipp'>add to wishlist</span></button>
-								<button class='add-to-compare'><i class='fa fa-exchange'></i><span class='tooltipp'>add to compare</span></button>
-								<button class='quick-view'><i class='fa fa-eye'></i><span class='tooltipp'>quick view</span></button>
-							</div>
 						</div>
 						<div class='add-to-cart'>
-							<button pid='$pro_id' id='product' class='add-to-cart-btn block2-btn-towishlist' href='#'><i class='fa fa-shopping-cart'></i> add to cart</button>
+							<button pid='$pro_id' id='product' class='add-to-cart-btn block2-btn-towishlist' href='#'><i class='fa fa-shopping-cart'></i> Thêm vào giỏ hàng</button>
 						</div>
 					</div>
 				</div>
@@ -178,13 +173,13 @@ if(isset($_POST["get_seleted_Category"]) ||  isset($_POST["search"])){
 							<img  src='product_images/$pro_image' style='max-height: 170px;' alt=''>
 							<div class='product-label'>
 								<span class='sale'>-30%</span>
-								<span class='new'>NEW</span>
+								<span class='new'>Mới</span>
 							</div>
 						</div></a>
 						<div class='product-body'>
 							<p class='product-category'>$cat_name</p>
 							<h3 class='product-name header-cart-item-name'><a href='product.php?p=$pro_id'>$pro_title</a></h3>
-							<h4 class='product-price header-cart-item-info'>$pro_price<del class='product-old-price'>$990.00</del></h4>
+							<h4 class='product-price header-cart-item-info'>$pro_price<span> VND<span></h4>
 							<div class='product-rating'>
 								<i class='fa fa-star'></i>
 								<i class='fa fa-star'></i>
@@ -192,14 +187,10 @@ if(isset($_POST["get_seleted_Category"]) ||  isset($_POST["search"])){
 								<i class='fa fa-star'></i>
 								<i class='fa fa-star'></i>
 							</div>
-							<div class='product-btns'>
-								<button class='add-to-wishlist' tabindex='0'><i class='fa fa-heart-o'></i><span class='tooltipp'>add to wishlist</span></button>
-								<button class='add-to-compare'><i class='fa fa-exchange'></i><span class='tooltipp'>add to compare</span></button>
-								<button class='quick-view' ><i class='fa fa-eye'></i><span class='tooltipp'>quick view</span></button>
-							</div>
+							
 						</div>
 						<div class='add-to-cart'>
-							<button pid='$pro_id' id='product' href='#' tabindex='0' class='add-to-cart-btn'><i class='fa fa-shopping-cart'></i> add to cart</button>
+							<button pid='$pro_id' id='product' href='#' tabindex='0' class='add-to-cart-btn'><i class='fa fa-shopping-cart'></i> Thêm vào giỏ hàng</button>
 						</div>
 					</div>
 				</div>

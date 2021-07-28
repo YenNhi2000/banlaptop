@@ -120,7 +120,7 @@ span.price {
 					<div class="row-checkout">
 					
 					<div class="col-50">
-						<h3>Billing Address</h3>
+						<h3>Địa chỉ đơn hàng</h3>
 						<label for="fname"><i class="fa fa-user" ></i> Họ và tên</label>
 						<input type="text" id="fname" class="form-control" name="firstname" pattern="^[a-zA-Z ]+$"  value="'.$row["first_name"].' '.$row["last_name"].'">
 						<label for="email"><i class="fa fa-envelope"></i> Email</label>
@@ -135,14 +135,11 @@ span.price {
 							<label for="state">Nơi giao hàng</label>
 							<input type="text" id="state" name="state" class="form-control" pattern="^[a-zA-Z ]+$" required>
 						</div>
-						<div class="col-50">
-							<label for="zip">Mã số hàng</label>
-							<input type="text" id="zip" name="zip" class="form-control" pattern="^[0-9]{6}(?:-[0-9]{4})?$" required>
-						</div>
+						
 						</div>
 					</div>
 
-					<label><input type="CHECKBOX" name="q" class="roomselect" value="conform" required> Shipping address same as billing
+					<label><input type="CHECKBOX" name="q" class="roomselect" value="conform" required> Địa chỉ giao hàng giống như thanh toán
 					</label>';
 					$i=1;
 					$total=0;
@@ -190,7 +187,7 @@ span.price {
 					$i=1;
 					echo
 					"
-					<h4>Cart 
+					<h4>Giỏ hàng
 					<span class='price' style='color:black'>
 					<i class='fa fa-shopping-cart'></i> 
 					<b>$total_count</b>
@@ -199,10 +196,10 @@ span.price {
 
 					<table class='table table-condensed'>
 					<thead><tr>
-					<th >no</th>
-					<th >product title</th>
-					<th >	qty	</th>
-					<th >	amount</th></tr>
+					<th >STT</th>
+					<th >Tên sản phẩm</th>
+					<th >	Số lượng	</th>
+					<th >	Tổng tiền</th></tr>
 					</thead>
 					<tbody>
 					";
@@ -234,7 +231,7 @@ span.price {
 				</table>
 				<hr>
 				
-				<h3>total<span class='price' style='color:black'><b>$$total</b></span></h3>";
+				<h3>Thành tiền<span class='price' style='color:black'><b>$total<span> VND<span></b></span></h3>";
 					
 				}
 				?>
@@ -243,39 +240,7 @@ span.price {
 		</div>
 	</div>
 </section>
-		<div id="newsletter" class="section">
-			<!-- container -->
-			<div class="container">
-				<!-- row -->
-				<div class="row">
-					<div class="col-md-12">
-						<div class="newsletter">
-							<p>Sign Up for the <strong>NEWSLETTER</strong></p>
-							<form >
-								<input class="input" type="email" placeholder="Enter Your Email">
-								<button class="newsletter-btn"><i class="fa fa-envelope"></i> Subscribe</button>
-							</form>
-							<ul class="newsletter-follow">
-								<li>
-									<a href="#"><i class="fa fa-facebook"></i></a>
-								</li>
-								<li>
-									<a href="#"><i class="fa fa-twitter"></i></a>
-								</li>
-								<li>
-									<a href="#"><i class="fa fa-instagram"></i></a>
-								</li>
-								<li>
-									<a href="#"><i class="fa fa-pinterest"></i></a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<!-- /row -->
-			</div>
-			<!-- /container -->
-		</div>
+		
 		
 <?php
 include "footer.php";
