@@ -214,7 +214,7 @@
 										</div>
 										
 										<div class="cart-btns">
-												<a href="cart.php" style="width:100%;"><i class="fa fa-edit"></i>  Sửa giỏ hàng</a>
+												<a href="cart.php" style="width:100%;"><i class="fa fa-edit"></i> Xem giỏ hàng</a>
 											
 										</div>
 									</div>
